@@ -1,14 +1,16 @@
+//created api key in open weather
 var APIKey = "85d498a50118be4822a5a08b4629b33a";
+//setup variables from the ids in html
 var cityEntered = document.querySelector('#cityEntered');
 var searchButton = document.querySelector('#searchButton');
 var todaysWeather = document.querySelector('#todaysWeather');
 var forecastHeader = document.querySelector('#forecastHeader')
 var fiveDayForecast = document.querySelector('#fiveDayForecast');
 var previousSearch = document.querySelector('#previousSearch');
+//setup array variable to push previous searches into
 var previousSearchList = [];
 var city;
-
-
+//created function for the city button to alert if empty or run the city name function when clicked
 function citybutton(event){
     event.preventDefault();
     city = cityEntered.value.trim().toLowerCase();
@@ -19,20 +21,19 @@ function citybutton(event){
     cityName(city);
     
 }
-
-
+//created function for the previous search buttons to reload that city when clicked
 function previousButton(event){
     city = event.target.textContent;
     cityName(city);
 }
-
+//setup funciton to clear the field for the next searched city
 function clearPreviousSearch(){
     fiveDayForecast.innerHTML = '';
     forecastHeader.textContent = '';
     cityEntered.value = '';
     todaysWeather.textContent = '';
 }
-
+//created function to pull data from api to push search city into search list and call the oneCall funtion
 function cityName(city){
 
     var geoAPI = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${APIKey}`
@@ -52,7 +53,9 @@ function cityName(city){
         })
 
 }
-
+//created function to pull data from api using lat and lon
+//first will clear previous search
+//then display current day and five day forecast
 function oneCall(lat,lon){
 
     var oneCallAPI = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely,alerts&appid=${APIKey}&units=imperial`
@@ -67,7 +70,7 @@ function oneCall(lat,lon){
             displayFiveDay(data.daily);
         })
 }
-
+//created function to display five day forcast
 function displayFiveDay(data){
     forecastHeader.textContent = '5-Day Forecast';
     for(i=1; i<6; i++){
@@ -84,7 +87,7 @@ function displayFiveDay(data){
         fiveDayForecast.appendChild(card);
     }
 }
-
+//created function to display current day forcast
 function displayToday(data){
     var cityCurrentInfo = document.createElement('div');
     var uvColor = getUVColor(data.uvi);
@@ -100,9 +103,8 @@ function displayToday(data){
                                         <li>UV Index: <span class="uvIcon" id='${uvColor}'>${data.uvi}</span></li>
                                     </ul>`
     todaysWeather.append(cityCurrentInfo);
-
 }
-
+//created function to identify low, medium, and high uv index
 function getUVColor(uvIndex){
 
     if(uvIndex < 2){
@@ -115,11 +117,11 @@ function getUVColor(uvIndex){
         return 'high';
     }
 }
-
+//created function to display the dated for the five day forcast
 function weekDate(date){
     return moment.unix(date).format("MM/DD/YYYY");
 }
-
+//created functions to local storage of the previous city searches
 function previousSearches(){ 
     var storedSearches = window.localStorage.getItem("storedSearches")
     if(storedSearches){
@@ -136,7 +138,7 @@ function displayPreviousSearch(){
             previousSearch.appendChild(searchLocationLink);
     }
 }
-
+//created event listeners for the search button and previous search buttons
 previousSearches();
 searchButton.addEventListener('click', citybutton);
 previousSearch.addEventListener('click', previousButton);
