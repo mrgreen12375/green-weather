@@ -18,3 +18,22 @@ header {
     flex-direction: column;
     margin-right: 20px;
 }
+
+#cityEntered {
+    height: 30px;
+    border-radius: 5px;
+    border-color: grey;
+}
+
+#searchButton {
+    height: 25px;
+    color: white;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: lightblue;
+}
+
+#searchButton:hover {
+    background-color: blue;
+}
