@@ -4,16 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>green weather</title>
+    <title>green weather forecast</title>
     <link rel="stylesheet" href="style.css"/>
 </head>
 <header>
     <P>Weather Dashboard</P>
 </header>
 <body>
-
-    <main>
-        <div>
+    <main class="row">
+        <div class="column-1">
             <h1>Search for a City:</h1>
             <form>
                 <input type="text" name="cityEntered" id="cityEntered" placeholder="Enter City Name Here">
@@ -21,8 +20,10 @@
             </form>
             <ul id="searchList"></ul>
         </div>
-        <h2 id="cityName"></h2>
-        <div id="forecast"></div>
+        <div class="column-2">
+            <h2 id="cityName"></h2>
+            <div id="forecast"></div>
+        </div>
     </main>
 </body>
 </html>
