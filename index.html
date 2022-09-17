@@ -4,16 +4,22 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--setup name for title-->        
         <title>green weather forecast</title>
+<!--setup link for a favicon image of a cloud-->
         <link rel="shortcut icon" href="./cloud-fav.jpg" type="image/x-icon">
+<!--setup link for css-->
         <link rel="stylesheet" href="style.css">
     </head>
+<!--created header to discribe the app-->
     <header>
         <P>Weather Dashboard</P>
     </header>
     <body>
+<!--created class to row style the two sections-->
         <main class="rows">
-            <div class="column1">
+<!--created section to search city with input field, search button, and list of previous searches-->
+            <section class="column1">
                 <h1>Search for a City:</h1>
                 <form class="column1">
                     <input type="text" name="cityEntered" id="cityEntered" placeholder="Enter City Name Here">
@@ -21,13 +27,15 @@
                 </form>
                 <hr>
                 <ul id="previousSearch"></ul>
-            </div>
-            <div>
+            </section>
+<!--created section for todays weather and fiveday forecast information-->
+            <section>
                 <div id="todaysWeather"></div>
                 <h2 id="forecastHeader"></h2>
                 <div id="fiveDayForecast"></div>
-            </div>
+            </section>
         </main>
+<!--setup links to js-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
         <script src="script.js"></script>
     </body>
