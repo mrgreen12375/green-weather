@@ -4,9 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>green weather</title>
+    <link rel="stylesheet" href="style.css"/>
 </head>
+<header>
+    <P>Weather Dashboard</P>
+</header>
 <body>
-    
+
+    <main>
+        <div>
+            <h1>Search for a City:</h1>
+            <form>
+                <input type="text" name="cityEntered" id="cityEntered" placeholder="Enter City Name Here">
+                <button type="button" id="searchButton">Search</button>
+            </form>
+            <ul id="searchList"></ul>
+        </div>
+        <h2 id="cityName"></h2>
+        <div id="forecast"></div>
+    </main>
 </body>
 </html>
