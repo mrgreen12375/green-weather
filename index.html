@@ -4,8 +4,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" href="./cloud-fav.jpg" type="image/x-icon">
         <title>green weather forecast</title>
+        <link rel="shortcut icon" href="./cloud-fav.jpg" type="image/x-icon">
         <link rel="stylesheet" href="style.css">
     </head>
     <header>
@@ -17,7 +17,7 @@
                 <h1>Search for a City:</h1>
                 <form class="column1">
                     <input type="text" name="cityEntered" id="cityEntered" placeholder="Enter City Name Here">
-                    <button type="button" id="searchButton">Search City's</button>
+                    <button type="submit" id="searchButton">Search City's</button>
                 </form>
                 <hr>
                 <ul id="previousSearch"></ul>
@@ -28,6 +28,7 @@
                 <div id="fiveDayForecast"></div>
             </div>
         </main>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
         <script src="script.js"></script>
     </body>
 </html>

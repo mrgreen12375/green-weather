@@ -11,6 +11,7 @@ header {
 .rows {
     display: flex;
     flex-direction: row;
+    margin-top: 20px;
 }
 
 .column1 {
@@ -18,12 +19,6 @@ header {
     flex-direction: column;
     margin-right: 20px;
     margin-left: 20px;
-}
-
-#cityEntered {
-    height: 30px;
-    border-radius: 5px;
-    border-color: grey;
 }
 
 #searchButton {
@@ -38,16 +33,41 @@ header {
 #searchButton:hover {
     background-color: rgb(63, 63, 185);
 }
+
+#low{
+    background-color: green;
+    color: white;
+}
+
+#medium{
+    background-color: rgb(195, 195, 0);
+    color: white;
+}
+
+#high{
+    background-color: red;
+    color: white;
+}
+
+.uvIcon{
+    padding: 1px 5px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
 #previousSearch{
     list-style: none;
     width: 100%;
+    position: relative;
+    right: 40px;
 }
 
-#previousSearch>li:hover{
+#previousSearch li:hover{
     cursor: pointer;
 }
 
-#previousSearch>li{
+#previousSearch li{
+    background-color: rgb(219, 219, 219);
     padding: 5px;
     border-radius: 5px;
     text-align: center;
@@ -55,7 +75,45 @@ header {
     text-transform: capitalize;
 }
 
+#todaysWeather {
+    border: 2px solid black;
+    background-color: rgb(219, 219, 219);
+}
+
+.todaysWeatherDirection {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 10px;
+}
+
+h2{
+    text-transform: capitalize;
+}
+
+h3 {
+    margin-left: 10px;
+}
+
 #fiveDayForecast {
     display: flex;
     flex-direction: row;
+}
+
+h4 {
+    font-size: 20px;
+    margin: 5px 0px 0px 10px;
+}
+
+.details {
+    list-style: none;
+    position: relative;
+    right: 30px;
+}
+
+.fiveDay {
+    background-color: rgb(48, 62, 73);
+    color: white;
+    margin-right: 20px;
+    padding-left: 5px;
 }
