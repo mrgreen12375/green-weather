@@ -90,7 +90,6 @@ function displayFiveDay(data){
 //created function to display current day forcast
 function displayToday(data){
     var cityCurrentInfo = document.createElement('div');
-    var uvColor = getUVColor(data.uvi);
     cityCurrentInfo.innerHTML = `<div class='todaysWeatherDirection'>
                                 <h2>${city}</h2>
                                  <img src=http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png />
@@ -100,23 +99,10 @@ function displayToday(data){
                                         <li>Temp: ${data.temp} &degF</li>
                                         <li>Wind Speed: ${data.wind_speed} MPH</li>
                                         <li>Humidity: ${data.humidity} %</li>
-                                        <li>UV Index: <span class="uvIcon" id='${uvColor}'>${data.uvi}</span></li>
                                     </ul>`
     todaysWeather.append(cityCurrentInfo);
 }
-//created function to identify low, medium, and high uv index
-function getUVColor(uvIndex){
 
-    if(uvIndex < 2){
-        return 'low';
-    }
-    if(uvIndex < 6){
-        return 'medium';
-    }
-    else{
-        return 'high';
-    }
-}
 //created function to display the dated for the five day forcast
 function weekDate(date){
     return moment.unix(date).format("MM/DD/YYYY");
