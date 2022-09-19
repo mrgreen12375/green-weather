@@ -34,27 +34,7 @@ header {
 #searchButton:hover {
     background-color: rgb(63, 63, 185);
 }
-/*style for the uv index*/
-#low{
-    background-color: green;
-    color: white;
-}
 
-#medium{
-    background-color: rgb(195, 195, 0);
-    color: white;
-}
-
-#high{
-    background-color: red;
-    color: white;
-}
-
-.uvIcon{
-    padding: 1px 5px;
-    border-radius: 5px;
-    margin: 5px;
-}
 /*style for the previous search buttons and hover*/
 #previousSearch{
     list-style: none;
