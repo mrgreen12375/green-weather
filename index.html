@@ -7,25 +7,27 @@
 <!--setup name for title-->        
         <title>green weather forecast</title>
 <!--setup link for a favicon image of a cloud-->
-        <link rel="shortcut icon" href="./cloud-fav.jpg" type="image/x-icon">
+        <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
 <!--setup link for css-->
         <link rel="stylesheet" href="style.css">
     </head>
 <!--created header to discribe the app-->
     <header>
+        <div class="title">
+        <img class="icon" src="./favicon.png" alt="sun icon" />
         <h1>Weather Dashboard<h1>
+        </div>
+        <form class="search">
+            <input type="text" name="cityEntered" id="cityEntered" placeholder="Enter City Name Here">
+            <button type="submit" id="searchButton">Search City's</button>
+        </form>
     </header>
     <body>
 <!--created class to row style the two sections-->
-        <main class="rows">
+        <main class="column1">
 <!--created section to search city with input field, search button, and list of previous searches-->
             <section class="column1">
-                <h1>Search for a City:</h1>
-                <form class="column1">
-                    <input type="text" name="cityEntered" id="cityEntered" placeholder="Enter City Name Here">
-                    <button type="submit" id="searchButton">Search City's</button>
-                </form>
-                <hr>
+                <h2 class="prev">Previously Searched</h2>
                 <ul id="previousSearch"></ul>
             </section>
 <!--created section for todays weather and fiveday forecast information-->

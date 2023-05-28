@@ -90,7 +90,8 @@ function displayFiveDay(data){
 //created function to display current day forcast
 function displayToday(data){
     var cityCurrentInfo = document.createElement('div');
-    cityCurrentInfo.innerHTML = `<div class='todaysWeatherDirection'>
+    cityCurrentInfo.innerHTML = `<div class='today'>
+                                <div class='todaysWeatherDirection'>
                                 <h2>${city}</h2>
                                  <img src=http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png />
                                  </div>
@@ -99,7 +100,8 @@ function displayToday(data){
                                         <li>Temp: ${data.temp} &degF</li>
                                         <li>Wind Speed: ${data.wind_speed} MPH</li>
                                         <li>Humidity: ${data.humidity} %</li>
-                                    </ul>`
+                                    </ul>
+                                </div>`
     todaysWeather.append(cityCurrentInfo);
 }
 
