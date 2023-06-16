@@ -119,8 +119,7 @@ h4 {
 
 .details {
     list-style: none;
-    position: relative;
-    right: 30px;
+    margin-left: -30px;
 }
 
 .fiveDay {
