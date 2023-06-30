@@ -6,10 +6,10 @@ This challenge was to produce a application that shows weather information for t
 
 ## Mock-up
 
-![alt Weather Dashboard Website](./weather-mockup.png)
+![alt Weather Dashboard Website](./images/weather-mockup.png)
 
 ## Deployment Links
 
-- https://mrgreen12375.github.io/green-weather/
+deploy - https://mrgreen12375.github.io/green-weather/
 
-- https://github.com/mrgreen12375/green-weather
+github repo -  https://github.com/mrgreen12375/green-weather
