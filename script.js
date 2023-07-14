@@ -7,6 +7,7 @@ var todaysWeather = document.querySelector('#todaysWeather');
 var forecastHeader = document.querySelector('#forecastHeader')
 var fiveDayForecast = document.querySelector('#fiveDayForecast');
 var previousSearch = document.querySelector('#previousSearch');
+var prev = document.querySelector('.prev');
 //setup array variable to push previous searches into
 var previousSearchList = [];
 var city;
@@ -119,6 +120,8 @@ function previousSearches(){
 }
 
 function displayPreviousSearch(){
+    prev.textContent = "Previously Searched"
+    prev.setAttribute('style', 'border-bottom: 3px solid black;')
     previousSearch.innerHTML = '';
     for(var i = 0; i < previousSearchList.length; i++){
             var searchLocationLink = document.createElement('li');

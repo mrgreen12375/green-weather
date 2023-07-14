@@ -44,7 +44,6 @@ input {
 }
 
 .prev {
-    border-bottom: 3px solid black;
     padding: 5px;
     margin-bottom: -5px;
 }
