@@ -6,6 +6,8 @@ This challenge was to produce a application that shows weather information for t
 
 ## Mock-up
 
+![alt Weather Dashboard Website](./images/landing-page-mockup.png)
+
 ![alt Weather Dashboard Website](./images/weather-mockup.png)
 
 ## Deployment Links
