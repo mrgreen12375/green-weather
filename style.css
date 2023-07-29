@@ -44,8 +44,25 @@ input {
 }
 
 .prev {
+    display: none;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 3px solid black;
     padding: 5px;
     margin-bottom: -5px;
+}
+
+.clearButton {
+    padding: 3px 5px 3px 5px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(36 181 230);
+}
+
+.clearButton:hover {
+    cursor: pointer;
+    background-color: rgb(138, 199, 220);
 }
 /*style for search button and hover*/
 #searchButton {

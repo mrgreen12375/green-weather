@@ -8,6 +8,7 @@ var forecastHeader = document.querySelector('#forecastHeader')
 var fiveDayForecast = document.querySelector('#fiveDayForecast');
 var previousSearch = document.querySelector('#previousSearch');
 var prev = document.querySelector('.prev');
+var clearSearch = document.createElement('button');
 //setup array variable to push previous searches into
 var previousSearchList = [];
 var city;
@@ -120,8 +121,11 @@ function previousSearches(){
 }
 
 function displayPreviousSearch(){
-    prev.textContent = "Previously Searched"
-    prev.setAttribute('style', 'border-bottom: 3px solid black;')
+    prev.textContent = "Previously Searched";
+    prev.setAttribute("style", "display: flex;")
+    clearSearch.textContent = "Clear";
+    clearSearch.setAttribute("class", "clearButton");
+    prev.appendChild(clearSearch);
     previousSearch.innerHTML = '';
     for(var i = 0; i < previousSearchList.length; i++){
             var searchLocationLink = document.createElement('li');
@@ -129,7 +133,15 @@ function displayPreviousSearch(){
             previousSearch.appendChild(searchLocationLink);
     }
 }
+
+function clearHighScores() {
+    window.localStorage.removeItem('storedSearches');
+    window.location.reload();
+}
+  
+clearSearch.addEventListener('click', clearHighScores);
 //created event listeners for the search button and previous search buttons
 previousSearches();
 searchButton.addEventListener('click', citybutton);
 previousSearch.addEventListener('click', previousButton);
+clearSearch.addEventListener('click', clearHighScores);
